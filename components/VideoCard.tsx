@@ -53,9 +53,6 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                   {post.postedBy.userName}
                   <GoVerified className="text-blue-400 text-md" />
                 </p>
-                {/* <p className="capitalize font-medium text-xs text-gray-500 hidden md:block">
-                  {post.postedBy.userName}
-                </p> */}
               </div>
             </Link>
           </div>
@@ -67,7 +64,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
         >
-          <Link href="/">
+          <Link href={`/detail/${post._id}`}>
             <video
               loop
               ref={videoRef}
