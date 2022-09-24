@@ -60,7 +60,7 @@ const Upload = () => {
         },
         userId: userProfile?._id,
         postedBy: {
-          _type: "postedby",
+          _type: "postedBy",
           _ref: userProfile?._id,
         },
         topic: category,
