@@ -56,7 +56,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
             <Link href="/">
               <div className="flex items-center gap-2">
                 <p className="flex gap-2 items-center md:text-md font-bold text-primary">
-                  {post.postedBy.userName}
+                  {post.postedBy.userName.toLowerCase().replaceAll(" ", "")}
                   <GoVerified className="text-blue-400 text-md" />
                 </p>
                 <p className="capitalize font-medium text-xs text-gray-500 hidden md:block">
